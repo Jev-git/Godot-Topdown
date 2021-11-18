@@ -5,13 +5,15 @@ export var m_fSpeed: float = 10
 func physics_process(_fDelta: float):
 	if Input.is_action_just_pressed("ui_accept"):
 		m_nStateMachine.change_state("Dash")
-		return
-	var vMoveDirection: Vector3 = _get_move_direction()
-	if vMoveDirection.length() > 0:
-		m_nStateMachine.m_nParentNode.move(vMoveDirection, m_fSpeed)
-		m_nStateMachine.m_nAnimPlayer.play("Run")
+	elif Input.is_action_just_pressed("ui_cancel"):
+		m_nStateMachine.change_state("Parry")
 	else:
-		m_nStateMachine.m_nAnimPlayer.play("Idle")
+		var vMoveDirection: Vector3 = _get_move_direction()
+		if vMoveDirection.length() > 0:
+			m_nStateMachine.m_nParentNode.move(vMoveDirection, m_fSpeed)
+			m_nStateMachine.m_nAnimPlayer.play("Run")
+		else:
+			m_nStateMachine.m_nAnimPlayer.play("Idle")
 
 func _get_move_direction() -> Vector3:
 	return Vector3(
