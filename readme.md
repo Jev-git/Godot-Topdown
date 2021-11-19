@@ -2,12 +2,11 @@
 * ~~Dash~~
 * Parry
     * ~~Projectiles to be parried~~
-    * Hurt animation
+    * ~~Hurt animation~~
         * ~~Change albedo color~~
         * ~~Screen shake~~
         * ~~Controller shake~~
-    * Parry send back
-    * Able to dash through bullet
+    * ~~Able to dash through bullet~~
 * Attack animations
 * Combo?
 # Collision layers

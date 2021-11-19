@@ -6,7 +6,7 @@ func physics_process(_fDelta: float):
 	if Input.is_action_just_pressed("ui_accept"):
 		m_nStateMachine.change_state("Dash")
 	elif Input.is_action_just_pressed("ui_cancel"):
-		m_nStateMachine.change_state("Parry")
+		m_nStateMachine.change_state("Block")
 	else:
 		var vMoveDirection: Vector3 = _get_move_direction()
 		if vMoveDirection.length() > 0:
