@@ -10,5 +10,5 @@ func dash_forward(_fSpeed: float):
 	var vForwardDirection: Vector2 = Vector2.DOWN.rotated(-deg2rad(rotation_degrees.y))
 	move_and_slide(Vector3(vForwardDirection.x, 0, vForwardDirection.y) * _fSpeed, Vector3.UP)
 
-func get_hit(_nOtherNode: Node):
-	emit_signal("get_hit", _nOtherNode)
+func trigger_dash_i_frame(_bIsInvincible: bool):
+	set_collision_layer_bit(2, !_bIsInvincible)

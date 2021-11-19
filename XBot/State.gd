@@ -16,7 +16,7 @@ func physics_process(_fDelta: float):
 	pass
 
 func get_hit(_nOtherNode: Node):
-	print("Get hit by %s" % _nOtherNode.get_path())
+	pass
 
 func _get_state_machine(_nNode: Node):
 	if _nNode.is_in_group("StateMachine"):

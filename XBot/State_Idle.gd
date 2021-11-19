@@ -15,9 +15,9 @@ func physics_process(_fDelta: float):
 		else:
 			m_nStateMachine.m_nAnimPlayer.play("Idle")
 
+func get_hit(_nOtherNode: Node):
+	m_nStateMachine.change_state("Hurt")
+
 func _get_move_direction() -> Vector3:
-	return Vector3(
-		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
-		0,
-		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	)
+	var vInput: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down");
+	return Vector3(vInput.x, 0, vInput.y);
