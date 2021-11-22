@@ -90,4 +90,3 @@ m_psBullet = ExtResource( 4 )
 
 [node name="Timer" type="Timer" parent="BulletSpawner"]
 wait_time = 2.0
-autostart = true

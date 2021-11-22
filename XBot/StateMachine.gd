@@ -12,6 +12,7 @@ func _init():
 
 func _ready():
 	m_nParentNode.connect("get_hit", self, "_on_parent_get_hit")
+	m_nAnimPlayer.connect("animation_finished", self, "_on_anim_finished")
 	m_nState.enter_state()
 
 func _process(delta):
@@ -32,3 +33,6 @@ func change_state(_sStatePath: String):
 		m_nState.exit_state()
 		m_nState = nNewState
 		m_nState.enter_state()
+
+func _on_anim_finished(_sAnimName: String):
+	m_nState.on_anim_finished(_sAnimName)

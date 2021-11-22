@@ -10,7 +10,7 @@ func _ready():
 	m_nDurationTimer.connect("timeout", self, "_on_duration_timer_timeout")
 
 func enter_state():
-	m_nStateMachine.m_nAnimPlayer.play("Block")
+	.enter_state()
 	m_nDurationTimer.start(m_fDuration)
 
 func get_hit(_nOtherNode: Node):
@@ -23,7 +23,6 @@ func _on_duration_timer_timeout():
 
 func exit_state():
 	if m_bIsSuccessfulParry:
-		print("true")
 		m_bIsAvailable = true
 		m_bIsSuccessfulParry = false
 	else:

@@ -7,8 +7,11 @@
         * ~~Screen shake~~
         * ~~Controller shake~~
     * ~~Able to dash through bullet~~
-* Action cooldown
+* ~~Action cooldown~~
 * Melee combo
+    * ~~Transition states~~
+    * Hitboxes
+    * Visual feedback
 # Collision layers
 * Layer 0: walls
 * Layer 1: player's collision with walls

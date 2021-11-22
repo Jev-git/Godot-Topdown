@@ -8,7 +8,7 @@ func physics_process(_fDelta: float):
 	elif Input.is_action_just_pressed("ui_cancel"):
 		m_nStateMachine.change_state("Block")
 	elif Input.is_action_just_pressed("ui_action"):
-		m_nStateMachine.change_state("Attack")
+		m_nStateMachine.change_state("Attack_1")
 	else:
 		var vMoveDirection: Vector3 = _get_move_direction()
 		if vMoveDirection.length() > 0:
