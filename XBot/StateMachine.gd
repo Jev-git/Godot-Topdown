@@ -28,6 +28,7 @@ func change_state(_sStatePath: String):
 		return
 	
 	var nNewState: State = get_node(_sStatePath)
-	m_nState.exit_state()
-	m_nState = nNewState
-	m_nState.enter_state()
+	if nNewState.m_bIsAvailable:
+		m_nState.exit_state()
+		m_nState = nNewState
+		m_nState.enter_state()

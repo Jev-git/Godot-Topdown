@@ -1,13 +1,19 @@
 extends Node
 class_name State
 
+export var m_fStateCooldown: float = 0
+onready var m_bIsAvailable: bool = true
+
 onready var m_nStateMachine: Node = _get_state_machine(self)
 
 func enter_state():
 	pass
 
 func exit_state():
-	pass
+	if m_fStateCooldown > 0:
+		m_bIsAvailable = false
+		yield(get_tree().create_timer(m_fStateCooldown), "timeout")
+		m_bIsAvailable = true
 
 func process(_fDelta: float):
 	pass
