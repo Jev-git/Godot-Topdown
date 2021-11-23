@@ -1,19 +1,5 @@
-# TODO
-* ~~Dash~~
-* Parry
-    * ~~Projectiles to be parried~~
-    * ~~Hurt animation~~
-        * ~~Change albedo color~~
-        * ~~Screen shake~~
-        * ~~Controller shake~~
-    * ~~Able to dash through bullet~~
-* ~~Action cooldown~~
-* Melee combo
-    * ~~Transition states~~
-    * Hitboxes
-    * Visual feedback
-# Collision layers
-* Layer 0: walls
-* Layer 1: player's collision with walls
-* Layer 2: player's hurtbox
-* Layer 3: projectiles
+# Simple topdown
+* Move with left analog stick
+* Dash with *cross*
+* Block/Parry with *circle*
+* Melee combo with *square*
